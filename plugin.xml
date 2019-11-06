@@ -34,8 +34,8 @@
           <param name="android-package" value="com.tokbox.cordova.OpenTokAndroidPlugin"/>
           <param name="onload" value="true" />
         </feature>
-      </config-file>  
-      
+      </config-file>
+
     </platform>
 
     <!-- ios -->
@@ -47,31 +47,15 @@
       <source-file src="src/ios/UIView+Category.m" />
       <header-file src="src/ios/OpenTokPlugin.h" />
       <source-file src="src/ios/OpenTokPlugin.m" />
+      <podspec>
+          <config>
+              <source url="https://github.com/CocoaPods/Specs.git"/>
+          </config>
+          <pods>
+              <pod name="OpenTok" spec="2.16.3" />
+          </pods>
+      </podspec>
 
-      <framework src="libstdc++.dylib" />
-      <framework src="libc++.dylib" />
-      <framework src="libxml2.dylib" />
-      <framework src="libsqlite3.dylib" />
-      <framework src="libpthread.dylib" />
-      <framework src="VideoToolbox.framework" />
-      <framework src="src/ios/OpenTok.framework" custom="true" />
-      <framework src="AudioToolbox.framework" />
-      <framework src="CoreData.framework" />
-      <framework src="AVFoundation.framework" />
-      <framework src="CoreGraphics.framework" />
-      <framework src="CoreMedia.framework" />
-      <framework src="CoreVideo.framework" />
-      <framework src="OpenGLES.framework" />
-      <framework src="SystemConfiguration.framework" />
-      <framework src="CoreTelephony.framework" />
-      <framework src="GLKit.framework" />
-      <framework src="EventKit.framework" />
-      <framework src="QuartzCore.framework" />
-      <framework src="MapKit.framework" />
-      <framework src="UIKit.framework" />
-      <framework src="Foundation.framework" />
-      <framework src="Security.framework" />
-      <framework src="CFNetwork.framework" />
 
       <!-- Add support for background audio to the plist -->
       <!-- https://tokbox.com/developer/sdks/ios/background-state.html -->
